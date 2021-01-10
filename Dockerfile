@@ -8,12 +8,12 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 # Install pip requirements
-WORKDIR /dataanalysis
+WORKDIR /othertest
 
 COPY requirements.txt .
 RUN python -m pip install -r requirements.txt
 
-COPY . /dataanalysis
+COPY . /othertest
 # Switching to a non-root user, please refer to https://aka.ms/vscode-docker-python-user-rights
 # RUN useradd appuser && chown -R appuser /app
 # USER appuser
